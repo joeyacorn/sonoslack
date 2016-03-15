@@ -7,7 +7,8 @@
     "imgur": "^0.1.5",
     "randomcolor": "^0.1.1",
     "request": "^2.44.0",
-    "sonos": "^0.6.1"
+    "sonos": "^0.6.1",
+    "twitter": "^1.2.5"
   },
   "devDependencies": {
     "iced-coffee-script": "^1.7.1-g"
