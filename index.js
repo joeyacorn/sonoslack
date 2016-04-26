@@ -105,7 +105,7 @@ postSong = function(track) {
       var imageData = require('fs').readFileSync('art.png');
 
       // send to twitter with album art link
-      tweetBody = "" + track.artist + ": " + track.title + " ";
+      tweetBody = config.officeName + ": " + track.artist + ": " + track.title + " ";
 
       client.post('media/upload', {media: imageData}, function(error, media, response) {
 
@@ -131,7 +131,7 @@ postSong = function(track) {
     } else {
 
       // send to twitter without album art link
-      tweetBody = "" + track.artist + ": " + track.title + " ";
+      tweetBody = config.officeName + ": " + track.artist + ": " + track.title + " ";
 
       client.post('statuses/update', {status: tweetBody}, function(error, tweet, response) {
 
