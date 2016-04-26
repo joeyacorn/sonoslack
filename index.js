@@ -95,6 +95,9 @@ postSong = function(track) {
 
   console.log(oneLiner);
 
+  if(! track.artist || ! track.title)
+      return;
+
   download(albumArtURL, "./art.png", track.artist, track.title, function(error) {
 
     if(!error) {
@@ -134,7 +137,7 @@ postSong = function(track) {
 
         if (error) {
 
-          throw error;
+	    console.log("Error posting tweet");
 
         }
 
